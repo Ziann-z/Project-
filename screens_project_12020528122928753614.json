@@ -1,0 +1,46 @@
+{
+  "project": {
+    "title": "Dark Mode Digital CV",
+    "id": "12020528122928753614"
+  },
+  "screens": [
+    {
+      "id": "cbd8da4e89a5443493f705484b8aec34",
+      "title": "Altaf Mizfalzian RPL Logo",
+      "width": "100",
+      "height": "100",
+      "mimeType": "image/svg+xml",
+      "htmlCodeUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY1Yzk4YmQ4ZTMxYmYwMWVlN2RjNTdiMzczYWU0EgsSBxDZ6vzq5hgYAZIBJAoKcHJvamVjdF9pZBIWQhQxMjAyMDUyODEyMjkyODc1MzYxNA&filename=&opi=89354086",
+      "screenshotUrl": "https://lh3.googleusercontent.com/aida/AEtjO1WvOcvmWxMKYh49Rqv-C3aBvNtBD2cUtyf20R2BSenqCnkYOfqWWO-iQiW34uTHxqJfe3fiKhXQRrqSLHU3eVizgtkOZHFvoBrSrwt_Vr-f7ET11pphlaB-Z0rbnjWzqGxvHZouE0sIaadmgrGLboF-5pwVe_umzVFMJhjEhiX5tT_bRPpurFEezhdEU5TuKULRjrSotNp2WyBc26kKgPygy0jLjisTef1k7EN-wdMNaod3xyXJH20KohmK",
+      "localFiles": {
+        "code": "d:/Antigravity/altaf_mizfalzian_rpl_logo.svg",
+        "screenshot": "d:/Antigravity/altaf_mizfalzian_rpl_logo.png"
+      }
+    },
+    {
+      "id": "a6ebdd772cb8433a996a8a3f08423ba3",
+      "title": "Professional modern portrait avatar of an Indonesian male high school / vocational student (SMK RPL) wearing a sleek dark hoodie or tech jacket, subtle indigo rim lighting, dark futuristic studio backdrop, clean high quality photo, smiling confident.",
+      "width": "1024",
+      "height": "1024",
+      "mimeType": "image/png",
+      "screenshotUrl": "https://lh3.googleusercontent.com/aida/AEtjO1VBVTqtzk8UaXHx9sW_KjXHMh8bSdJGrtyaHSYBySKX4jXoidnllCX7o81WZ_u866gmrT88etZN2z4ta-bsnUo4EJ1H7i166Yl02LuO0lOr5TDkjkDRpD-LURDY1cSbkKRMm5VXLJ5ZB0ICyXmgGdlAdh9Kys3NQ8TvGuwN_WAIcvVYADqustxPWQWbIb9mdZ-JCQqRXNUazAehkgvLywQafmZ5e58aVV8vTfw_eXujGeyeKHbdy2zMPACc",
+      "localFiles": {
+        "image": "d:/Antigravity/altaf_mizfalzian_avatar.png"
+      }
+    },
+    {
+      "id": "ebb132418b004a20bb1aac7617b4160d",
+      "title": "Digital CV - Altaf Mizfalzian (SMK RPL)",
+      "deviceType": "MOBILE",
+      "width": "780",
+      "height": "6530",
+      "mimeType": "text/html",
+      "htmlCodeUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY1Yzk4YzExMDhjMzgwNTRjZmQ2ZmYzMjE2ODlhEgsSBxDZ6vzq5hgYAZIBJAoKcHJvamVjdF9pZBIWQhQxMjAyMDUyODEyMjkyODc1MzYxNA&filename=&opi=89354086",
+      "screenshotUrl": "https://lh3.googleusercontent.com/aida/AEtjO1WPq98fi2e5jScc6FMH-Yt-L5yPFW1EpNNpArz0U5IZGPstW7DeCy58nSatnPRsfzf2CzAnfq0TqS8nWJgfELOZsE7pnY9GrZbw-aGrdzAHcV0izxDUs5F7f6Lv8qwjUQX9QNmip57aIeldwBkQQtGycVyU5AqE24Ef_q0PbepCNztw2SRwQVv3hk2O126adtc9526acOEgT1NnA76Ct3TpH18hGwKNniUxpZ2QjVJ6DLbkkoS5AjSn_ohd",
+      "localFiles": {
+        "code": "d:/Antigravity/digital_cv_altaf_mizfalzian.html",
+        "screenshot": "d:/Antigravity/digital_cv_altaf_mizfalzian_screenshot.png"
+      }
+    }
+  ]
+}

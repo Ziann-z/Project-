@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#0f131c;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary": "#1d00a5", "primary-fixed": "#e1e0ff", "inverse-surface": "#dfe2ee", "outline": "#908fa0", "on-surface-variant": "#c7c4d7", "on-secondary-container": "#a8afff", "surface-container": "#1c2028", "primary-fixed-dim": "#c0c1ff", "inverse-on-surface": "#2c3039", "surface-variant": "#31353e", "on-secondary": "#131e8c", "secondary-fixed-dim": "#bdc2ff", "on-tertiary-fixed": "#0f0069", "secondary": "#bdc2ff", "on-primary-fixed-variant": "#2f2ebe", "surface-container-highest": "#31353e", "tertiary-fixed-dim": "#c3c0ff", "secondary-fixed": "#e0e0ff", "surface-container-high": "#262a33", "surface-dim": "#0f131c", "outline-variant": "#464554", "on-surface": "#dfe2ee", "surface-container-low": "#181c24", "background": "#0f131c", "surface-bright": "#353942", "on-primary": "#1000a9", "tertiary": "#c3c0ff", "on-background": "#dfe2ee", "error-container": "#93000a", "on-secondary-fixed-variant": "#2f3aa3", "surface-container-lowest": "#0a0e16", "primary": "#c0c1ff", "error": "#ffb4ab", "primary-container": "#8083ff", "on-primary-fixed": "#07006c", "tertiary-fixed": "#e2dfff", "on-tertiary-fixed-variant": "#3323cc", "surface": "#0f131c", "inverse-primary": "#494bd6", "on-tertiary-container": "#180092", "on-error": "#690005", "on-error-container": "#ffdad6", "surface-tint": "#c0c1ff", "tertiary-container": "#8582ff", "secondary-container": "#2f3aa3", "on-primary-container": "#0d0096", "on-secondary-fixed": "#000767" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "1.25rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "space-md": "1rem", "margin": "2rem", "gutter-mobile": "1rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter": "1.5rem" }, "fontFamily": { "headline-md": ["Space Grotesk"], "body-md": ["Geist"], "headline-sm": ["Space Grotesk"], "headline-xl": ["Space Grotesk"], "headline-lg": ["Space Grotesk"], "body-sm": ["Geist"], "label-sm": ["JetBrains Mono"], "code-snippet": ["JetBrains Mono"], "label-md": ["JetBrains Mono"], "headline-xl-mobile": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "body-lg": ["Geist"] }, "fontSize": { "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "code-snippet": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-xl-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen selection:bg-primary selection:text-on-primary"><header class="fixed top-0 inset-x-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.4)] pt-safe"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Dev Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSu7TEPB2Eaosu8K3jInrRj0wtiH48h79S4U3lJnyYQOkIyqQgXrGhPa-ymDb3yKCCS6rBOac59Jta52zKNV2HAWucN-usWwhHd_HUYcrVAU6orgZDzeQYyCMxwmaC99iPfzTj3JRsO19yi4L-VOhW7HyNz2mKaHwjcEoXsE2ZBgXOXSW-hnZpAAT-90zFc72rBqRreZZNrRs659r9-Ut-sDnovKiKol3F0DeRsLbYSgdHc15-3VcLAw"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface truncate tracking-tight">SMK RPL // DEV</span><span class="font-label-sm text-label-sm text-primary tracking-widest uppercase truncate">Profile</span></div></div><div class="flex items-center gap-space-sm shrink-0"><div class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]"></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_0_10px_rgba(192,193,255,0.25)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2cefeISEp9KhtXxdkH0yzwUwKgPeATXlu4JuwIF-YKh31vBXcKWepwp4M4m7J2MYBvyXMQ0HtFSGWwCnTWKNOIlbIXQDAh2SEOTixtUDZVcbh8l5A1BBMlU9hdcCeoo23gMacgcCa9pME7WXuBxQWSF9Go0WvRg03tc0p09aBcXy28DdAhOc26MRDDboYrL0lAMbe7jWYmS8UG434Gg_yII9CvsRF-I5eyphyYkyvuaVt10t61kpFzA"/></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin-mobile py-space-md gap-space-xl">
+<!-- Hero / Identity Card -->
+<section class="relative overflow-hidden rounded-xl bg-surface-container p-space-lg shadow-xl">
+<div class="absolute -right-12 -top-12 w-48 h-48 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-12 -bottom-12 w-40 h-40 rounded-full bg-secondary-container/20 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col items-center text-center gap-space-md">
+<!-- Avatar with glowing aura & dynamic status dot -->
+<div class="relative">
+<div class="w-24 h-24 rounded-full p-1 bg-gradient-to-tr from-primary via-secondary to-primary-container shadow-[0_0_24px_rgba(192,193,255,0.35)]">
+<img class="w-full h-full rounded-full object-cover bg-surface-container-highest" data-alt="Photorealistic portrait of a young Indonesian male vocational software engineering student named Muhammad Raihan wearing a sleek dark tech hoodie, subtle neon indigo rim lighting, smart confident smile, clean dark minimal developer workspace background with glowing monitors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqkmC5agngTFqHO1Tv2VFi32Nr-89NX2ZBD9XfYJlmdA6Bq43tBsZri9kz792TWG3zJmK1qUUgxdfj147POn66svoSVGi_w-_voWxTAxXjlie8-smfy9Brn6qudpykZju_roBuCDo7QrJSuWR8sE9MPQiK_obYItBYQBL_G45jzCw2N_blJ3JEpwLmVrf0xdLRH2K-isNu4iT8bfXtxA93JdaJx1as75YMOVq--4w-umxi5Jl5xaELSg"/>
+</div>
+<div class="absolute bottom-1 right-1 flex items-center justify-center w-5 h-5 rounded-full bg-surface-container-lowest">
+<span class="w-3.5 h-3.5 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_#34d399]"></span>
+</div>
+</div>
+<!-- Identity & Status Pill -->
+<div class="flex flex-col items-center gap-space-xs">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface shadow-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span class="font-label-sm text-label-sm tracking-wide text-primary-fixed uppercase">Tersedia untuk PKL / Magang Industri</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight mt-1">Muhammad Raihan</h1>
+<p class="font-headline-sm text-headline-sm text-primary tracking-normal">Junior Full-Stack Web &amp; Mobile Developer</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs mt-0.5">
+          Siswa SMK Negeri Informatika Jurusan Rekayasa Perangkat Lunak (RPL) fokus pada arsitektur web modern, API andal, dan desain responsif.
+        </p>
+</div>
+<!-- Quick Metrics Grid -->
+<div class="grid grid-cols-3 gap-space-xs w-full pt-space-xs">
+<div class="flex flex-col items-center p-2.5 rounded-lg bg-surface-container-low shadow-sm">
+<span class="font-headline-md text-headline-md text-primary">12+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mini Repos</span>
+</div>
+<div class="flex flex-col items-center p-2.5 rounded-lg bg-surface-container-low shadow-sm">
+<span class="font-headline-md text-headline-md text-primary">3</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Karya Utama</span>
+</div>
+<div class="flex flex-col items-center p-2.5 rounded-lg bg-surface-container-low shadow-sm">
+<span class="font-headline-md text-headline-md text-primary">BNSP</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tersertifikasi</span>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="flex items-center gap-space-sm w-full mt-1">
+<a class="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline-sm text-headline-sm shadow-[0_0_16px_rgba(128,131,255,0.4)] active:scale-[0.98] transition-transform" href="#contact-section">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Ajak Magang</span>
+</a>
+<a class="inline-flex items-center justify-center p-3 rounded-lg bg-surface-container-high text-on-surface hover:text-primary active:scale-[0.98] transition-all shadow-sm" href="#projects-section">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Technical Competencies & Skills Bars -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">code</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Kompetensi Keahlian RPL</h2>
+</div>
+<span class="font-label-sm text-label-sm text-primary-fixed bg-surface-container-high px-2.5 py-0.5 rounded-full">Kurikulum Merdeka</span>
+</div>
+<div class="flex flex-col gap-space-sm p-space-md rounded-xl bg-surface-container shadow-md">
+<!-- Skill 1 -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">html</span>
+            HTML5, CSS3 &amp; Tailwind CSS
+          </span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">92%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-lowest overflow-hidden">
+<div class="h-full rounded-full bg-gradient-to-r from-secondary-container via-primary-container to-primary transition-all duration-1000" style="width: 92%;"></div>
+</div>
+</div>
+<!-- Skill 2 -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">javascript</span>
+            JavaScript (ES6+) &amp; TypeScript
+          </span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">85%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-lowest overflow-hidden">
+<div class="h-full rounded-full bg-gradient-to-r from-secondary-container via-primary-container to-primary transition-all duration-1000" style="width: 85%;"></div>
+</div>
+</div>
+<!-- Skill 3 -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">php</span>
+            PHP 8 &amp; Laravel Framework
+          </span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">88%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-lowest overflow-hidden">
+<div class="h-full rounded-full bg-gradient-to-r from-secondary-container via-primary-container to-primary transition-all duration-1000" style="width: 88%;"></div>
+</div>
+</div>
+<!-- Skill 4 -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">database</span>
+            MySQL &amp; Database Relational
+          </span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">80%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-lowest overflow-hidden">
+<div class="h-full rounded-full bg-gradient-to-r from-secondary-container via-primary-container to-primary transition-all duration-1000" style="width: 80%;"></div>
+</div>
+</div>
+<!-- Skill 5 -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">source_environment</span>
+            Git, GitHub &amp; CI Flow
+          </span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">82%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-lowest overflow-hidden">
+<div class="h-full rounded-full bg-gradient-to-r from-secondary-container via-primary-container to-primary transition-all duration-1000" style="width: 82%;"></div>
+</div>
+</div>
+<!-- Skill 6 -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">devices</span>
+            React &amp; Vue Ecosystem Basics
+          </span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">75%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-lowest overflow-hidden">
+<div class="h-full rounded-full bg-gradient-to-r from-secondary-container via-primary-container to-primary transition-all duration-1000" style="width: 75%;"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Projects Showcase -->
+<section class="flex flex-col gap-space-md" id="projects-section">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">layers</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Proyek Portofolio Terpilih</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code-snippet">3 PROYEK AKTIF</span>
+</div>
+<!-- Project 1: SIMAS -->
+<article class="flex flex-col rounded-xl bg-surface-container overflow-hidden shadow-lg group">
+<div class="relative w-full h-44 bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern web application dashboard for Indonesian school attendance system SIMAS with dark UI, statistical charts, student attendance lists, clean violet and indigo charts on glowing monitor screens" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeQUjjPRvcaH3rDsStXFqjmzr9Udd805E8niSlhIRCaEsQ-2OhVvFnSbGNKLta_zka2ayjNj3x7js6kfTxthvc2129Rd5P9Tju7PWm3P7lVhxI9AtslH-Wt2e89mfLZ1uSZ70KgoQ5qqjZaxiJz3L-epDvtAmNLYS1g9v4VmcVhh2CzOF2ATkgTRBISKR6gkbRNraTb0fe3EG-HM_JwkTYjtoTC-simzYA5IMzMhZ0C5hLWQGBLxq4gg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<div class="absolute top-3 left-3 px-2.5 py-1 rounded bg-surface-container-lowest/80 backdrop-blur-md">
+<span class="font-label-sm text-label-sm text-primary font-semibold">Production Ready</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Sistem Informasi Presensi &amp; Nilai Siswa (SIMAS)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Platform manajemen sekolah terpadu untuk pencatatan kehadiran presensi real-time, rekap nilai kurikulum, dan portal wali murid otomatis.
+        </p>
+<!-- Tech Pills -->
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary">Laravel 11</span>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary">Livewire v3</span>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary">Tailwind CSS</span>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary">MySQL</span>
+</div>
+<!-- Buttons -->
+<div class="flex items-center gap-space-sm pt-2">
+<a class="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Live Demo</span>
+</a>
+<a class="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-surface-container-high text-on-surface hover:text-primary font-label-md text-label-md active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined text-[16px]">code</span>
+<span>Source Code</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Project 2: EduKasir -->
+<article class="flex flex-col rounded-xl bg-surface-container overflow-hidden shadow-lg group">
+<div class="relative w-full h-44 bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Smartphone point of sale POS application interface for school cooperative called EduKasir, showing transaction receipt, barcode scanner screen, grocery items grid, modern dark aesthetic with neon indigo details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkXZdWx07uTIuR4KbW4tr02yD8mYsr8PgaX10-Ymoxenb0mAKU33gnP369W9nH3J2DK4Poaxwpqkj2fsNbzrR5sn9hjuqYlMmwxuvMpU4TAQSox8cQiMyv2Q45xK0fsvhBiknKZWoxk0tXu0xKh_FqIQYAcZSFY4emWyGq_-qbt8rOvLUc9nr8Os6smxnqNpa3wn9PzGJmMzl9MkH56etfFaXe3tyHTq1_cYvS87G4IIQreGnCerKizw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<div class="absolute top-3 left-3 px-2.5 py-1 rounded bg-surface-container-lowest/80 backdrop-blur-md">
+<span class="font-label-sm text-label-sm text-secondary-fixed font-semibold">Mobile App</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">EduKasir - POS &amp; Mini Market Koperasi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Aplikasi kasir portabel berbasis tablet dan Android dengan sinkronisasi inventaris offline, cetak struk via bluetooth thermal, dan laporan harian.
+        </p>
+<!-- Tech Pills -->
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary">React Native</span>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary">Express.js</span>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary">SQLite</span>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary">Bluetooth POS</span>
+</div>
+<!-- Buttons -->
+<div class="flex items-center gap-space-sm pt-2">
+<a class="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined text-[16px]">android</span>
+<span>APK Release</span>
+</a>
+<a class="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-surface-container-high text-on-surface hover:text-primary font-label-md text-label-md active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span>Repository</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Project 3: E-Perpus RPL -->
+<article class="flex flex-col rounded-xl bg-surface-container overflow-hidden shadow-lg group">
+<div class="relative w-full h-44 bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Digital library management system interface on computer screen with integrated QR code scanner window, catalog of IT textbooks, loan expiration notification, futuristic sleek deep purple style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8SaOBQhyZK7VaIvltT1_QbSBmvVjXiWk6YmFUxRiYGR-JsAwm4z9r3gFbEShZpZXJ4NsV6ltfv-lFN1yoeUnhUQ0UkwYCeKc1HRbHzPjaZfoQ4uF8X6IA1EMNqVxGjKluWu6SmnvPh4aR9qr8fdQ4MocXWD60jxKkM6s-PPXqrky3Tv_EZD79GkqQ8HBR9vHtTcBjHgWgYbLaJAPtdYU8TNAh938A5lz_g0BG-XJzOOkW3CgcwNmdsQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<div class="absolute top-3 left-3 px-2.5 py-1 rounded bg-surface-container-lowest/80 backdrop-blur-md">
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-semibold">Tugas Akhir RPL</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">E-Perpus RPL - Digital Library System</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Sistem otomasi perpustakaan sekolah dilengkapi pemindai QR kartu siswa, perhitungan denda otomatis, dan rest-api katalog buku.
+        </p>
+<!-- Tech Pills -->
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary">PHP Native OOP</span>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary">REST API</span>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary">QR Scanner JS</span>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary">Bootstrap 5</span>
+</div>
+<!-- Buttons -->
+<div class="flex items-center gap-space-sm pt-2">
+<a class="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+<span>Uji Coba</span>
+</a>
+<a class="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-surface-container-high text-on-surface hover:text-primary font-label-md text-label-md active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined text-[16px]">folder_zip</span>
+<span>Dokumentasi</span>
+</a>
+</div>
+</div>
+</article>
+</section>
+<!-- Education & Certifications Timeline -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">school</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Pendidikan &amp; Sertifikasi</h2>
+</div>
+<div class="relative pl-6 flex flex-col gap-space-lg">
+<!-- Vertical line guide -->
+<div class="absolute left-2.5 top-2 bottom-2 w-0.5 bg-surface-container-high"></div>
+<!-- Item 1: BNSP -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-primary ring-4 ring-surface shadow-[0_0_8px_#c0c1ff]"></div>
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Sertifikasi BNSP Junior Web Developer</span>
+<span class="font-label-sm text-label-sm text-primary">2024</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Lembaga Sertifikasi Profesi (LSP) P1 SMK</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          Dinyatakan Kompeten dalam skema pemrograman web: implementasi user interface, integrasi basis data, validasi formulir, dan debugging kode.
+        </p>
+</div>
+<!-- Item 2: SMK RPL Education -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-secondary ring-4 ring-surface"></div>
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">SMK Negeri Informatika</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2022 - 2025</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary">Kompetensi Keahlian Rekayasa Perangkat Lunak (RPL)</span>
+<ul class="flex flex-col gap-1 mt-1 text-on-surface-variant font-body-sm text-body-sm list-inside">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[14px] text-primary mt-1">check_circle</span>
+<span>Pemodelan Perangkat Lunak &amp; Analisis Kebutuhan Sistem</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[14px] text-primary mt-1">check_circle</span>
+<span>Basis Data Relasional &amp; Normalisasi ERD</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[14px] text-primary mt-1">check_circle</span>
+<span>Pemrograman Berorientasi Objek (OOP) &amp; Clean Code</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[14px] text-primary mt-1">check_circle</span>
+<span>Pemrograman Web dan Perangkat Bergerak (PWPB)</span>
+</li>
+</ul>
+</div>
+<!-- Item 3: Hackathon / LKS -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-surface-container-highest ring-4 ring-surface"></div>
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Finalis LKS Web Technologies</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tingkat Kota 2024</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Lomba Kompetensi Siswa SMK</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          Membangun SPA interaktif responsif berbasis API dalam durasi 6 jam dengan metodologi test-driven standar industri.
+        </p>
+</div>
+</div>
+</section>
+<!-- Contact / Hire Me Form Section -->
+<section class="flex flex-col gap-space-md" id="contact-section">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">mark_chat_unread</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Hubungi Saya &amp; Tawaran PKL</h2>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container shadow-2xl relative overflow-hidden">
+<!-- Glow ambient backdrop -->
+<div class="absolute -top-16 -right-16 w-36 h-36 rounded-full bg-primary/20 blur-3xl pointer-events-none"></div>
+<form class="flex flex-col gap-space-md relative z-10" id="contact-form" onsubmit="event.preventDefault(); document.getElementById('form-feedback').classList.remove('hidden'); this.reset();">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface" for="contact-name">Nama Lengkap / Instansi Perusahaan</label>
+<div class="flex items-center px-3 py-2.5 rounded-lg bg-surface-container-low focus-within:ring-2 focus-within:ring-primary transition-all">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] mr-2">person</span>
+<input class="w-full bg-transparent text-on-surface placeholder:text-on-surface-variant/60 font-body-sm text-body-sm outline-none" id="contact-name" placeholder="Contoh: PT Teknologi Inovasi Mandiri" required="" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface" for="contact-email">Alamat Email Resmi</label>
+<div class="flex items-center px-3 py-2.5 rounded-lg bg-surface-container-low focus-within:ring-2 focus-within:ring-primary transition-all">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] mr-2">alternate_email</span>
+<input class="w-full bg-transparent text-on-surface placeholder:text-on-surface-variant/60 font-body-sm text-body-sm outline-none" id="contact-email" placeholder="hrd@perusahaan.co.id" required="" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface" for="contact-message">Pesan / Detail Tawaran Magang (PKL)</label>
+<div class="flex items-start px-3 py-2.5 rounded-lg bg-surface-container-low focus-within:ring-2 focus-within:ring-primary transition-all">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] mr-2 mt-0.5">chat</span>
+<textarea class="w-full bg-transparent text-on-surface placeholder:text-on-surface-variant/60 font-body-sm text-body-sm outline-none resize-none" id="contact-message" placeholder="Tuliskan jadwal periode PKL, posisi yang tersedia, atau project yang sedang dikerjakan..." required="" rows="4"></textarea>
+</div>
+</div>
+<button class="w-full inline-flex items-center justify-center gap-2 py-3 px-6 rounded-lg bg-gradient-to-r from-primary via-primary-container to-secondary-container text-on-primary font-headline-sm text-headline-sm shadow-[0_0_20px_rgba(128,131,255,0.45)] hover:shadow-[0_0_25px_rgba(128,131,255,0.6)] active:scale-[0.98] transition-all" type="submit">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Kirim Pesan Sekarang</span>
+</button>
+<!-- Dynamic Success Feedback State -->
+<div class="hidden p-3 rounded-lg bg-emerald-950/60 text-emerald-200 text-body-sm font-body-sm flex items-center gap-2 animate-fade-in" id="form-feedback">
+<span class="material-symbols-outlined text-[18px] text-emerald-400">check_circle</span>
+<span>Terima kasih! Pesan dan undangan Anda berhasil terkirim. Raihan akan segera membalas.</span>
+</div>
+</form>
+</div>
+<!-- Direct Quick Links Matrix -->
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<a class="flex items-center gap-2.5 p-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" href="https://wa.me/" target="_blank">
+<div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface truncate font-semibold">WhatsApp</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Fast Response</span>
+</div>
+</a>
+<a class="flex items-center gap-2.5 p-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" href="https://github.com" target="_blank">
+<div class="w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">code</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface truncate font-semibold">GitHub</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">@raihan-dev</span>
+</div>
+</a>
+<a class="flex items-center gap-2.5 p-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" href="https://linkedin.com" target="_blank">
+<div class="w-8 h-8 rounded-full bg-secondary/20 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface truncate font-semibold">LinkedIn</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Muhammad Raihan</span>
+</div>
+</a>
+<a class="flex items-center gap-2.5 p-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" href="mailto:raihan.rpl@example.com">
+<div class="w-8 h-8 rounded-full bg-tertiary/20 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface truncate font-semibold">Email Siswa</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">raihan.rpl@dev.id</span>
+</div>
+</a>
+</div>
+</section>
+<!-- Interactive Terminal Footnote -->
+<footer class="flex flex-col items-center justify-center gap-1.5 py-space-md text-center">
+<div class="inline-flex items-center gap-1 text-on-surface-variant font-code-snippet text-code-snippet">
+<span class="text-primary">&gt;</span>
+<span>smk-rpl-portofolio --status ready --year 2025</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant/80">
+      Dibuat dengan dedikasi kode bersih oleh Muhammad Raihan • Siswa SMK RPL Indonesia
+    </p>
+</footer>
+</div>
+<script>
+  // Smooth micro-interactions for skill bars on view
+  document.addEventListener('DOMContentLoaded', () => {
+    const bars = document.querySelectorAll('#contact-section input, #contact-section textarea');
+    bars.forEach(el => {
+      el.addEventListener('focus', () => {
+        el.parentElement.classList.add('bg-surface-container-highest');
+      });
+      el.addEventListener('blur', () => {
+        el.parentElement.classList.remove('bg-surface-container-highest');
+      });
+    });
+  });
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-4px_20px_rgba(0,0,0,0.5)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-20 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs min-w-[64px] min-h-[44px] py-1 transition-colors text-primary font-semibold" data-path="profile" href="#"><span class="material-symbols-outlined text-[22px]">terminal</span><span class="font-label-sm text-label-sm">Profile</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[64px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="projects" href="#"><span class="material-symbols-outlined text-[22px]">code_blocks</span><span class="font-label-sm text-label-sm">Projects</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[64px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="skills" href="#"><span class="material-symbols-outlined text-[22px]">memory</span><span class="font-label-sm text-label-sm">Skills</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[64px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#"><span class="material-symbols-outlined text-[22px]">alternate_email</span><span class="font-label-sm text-label-sm">Contact</span></a></div></nav></body></html>

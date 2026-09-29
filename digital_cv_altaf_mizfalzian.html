@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#0e1321;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary": "#1000a9", "primary-container": "#8083ff", "on-primary-fixed-variant": "#2f2ebe", "surface-variant": "#303444", "outline": "#908fa0", "tertiary-container": "#b76dff", "on-tertiary-fixed": "#2c0051", "surface-container-high": "#252a39", "on-secondary": "#131e8c", "outline-variant": "#464554", "tertiary-fixed-dim": "#ddb7ff", "surface-container": "#1a1f2e", "on-primary-container": "#0d0096", "on-background": "#dee2f6", "tertiary-fixed": "#f0dbff", "inverse-on-surface": "#2b303f", "inverse-primary": "#494bd6", "surface-container-low": "#161b2a", "on-error": "#690005", "surface-container-lowest": "#090e1c", "on-surface-variant": "#c7c4d7", "primary-fixed": "#e1e0ff", "on-tertiary-fixed-variant": "#6900b3", "on-surface": "#dee2f6", "secondary-fixed-dim": "#bdc2ff", "surface-dim": "#0e1321", "on-tertiary-container": "#400071", "surface-tint": "#c0c1ff", "surface-bright": "#343948", "surface-container-highest": "#303444", "secondary-fixed": "#e0e0ff", "error-container": "#93000a", "background": "#0e1321", "secondary": "#bdc2ff", "inverse-surface": "#dee2f6", "error": "#ffb4ab", "on-tertiary": "#490080", "on-secondary-container": "#a8afff", "on-secondary-fixed": "#000767", "surface": "#0e1321", "on-error-container": "#ffdad6", "on-secondary-fixed-variant": "#2f3aa3", "tertiary": "#ddb7ff", "secondary-container": "#2f3aa3", "primary-fixed-dim": "#c0c1ff", "primary": "#c0c1ff", "on-primary-fixed": "#07006c" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin": "2rem", "gutter-mobile": "1rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "space-xl": "2.5rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter": "1.5rem" }, fontFamily: { "headline-sm": ["Inter"], "body-sm": ["Inter"], "code-sm": ["JetBrains Mono"], "headline-xl-mobile": ["Inter"], "label-caps": ["JetBrains Mono"], "body-lg": ["Inter"], "headline-lg-mobile": ["Inter"], "headline-xl": ["Inter"], "title-md": ["Inter"], "body-md": ["Inter"], "headline-lg": ["Inter"], "headline-md": ["Inter"], "code-md": ["JetBrains Mono"] }, fontSize: { "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "code-sm": ["12px", { "lineHeight": "18px", "fontWeight": "500" }], "headline-xl-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "code-md": ["14px", { "lineHeight": "22px", "fontWeight": "500" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen antialiased selection:bg-primary selection:text-on-primary"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Altaf Mizfalzian RPL Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VZ-A5Hp56N-tLQYlygfE65qGCKEwNijasg9PPTEsCbcwecsy6fWboH9cyGunVRt5m5kwsUaoxUKUxkfrjJ_TUDwTAygffpLPFwR6KaLRrZrYsCyJ4jliBxr-jqzYXjmg2V-NhDoRtFo4g_WGomY9yctyKcqZfDgmBbrMPGtZjt3e0KO-XaLN-udezhMtyR0kAdD68HNFbdfqoGdDnhjIDXJSn0UuLMR4_ocmcXEEiAMhJe_TRX42X6AB8W"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-code-sm text-code-sm text-primary tracking-wider">&gt;_</span><span class="font-title-md text-title-md text-on-surface font-semibold tracking-tight">Altaf M.</span></div><div class="flex items-center gap-space-xs"><span class="font-label-caps text-label-caps text-tertiary uppercase">SMK RPL</span><span class="font-code-sm text-code-sm text-outline-variant">•</span><span class="font-code-sm text-code-sm text-on-surface-variant truncate max-w-[110px]">Profile Cv</span></div></div></div><div class="flex items-center gap-space-sm"><div class="h-6 px-space-xs bg-surface-container-high rounded flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span><span class="font-label-caps text-label-caps text-on-surface-variant">ACTIVE</span></div><a class="flex items-center justify-center p-0.5 rounded-full ring-1 ring-primary/30 min-w-[44px] min-h-[44px]" data-path="profile-cv" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdm5Ld1cZJtVHs8-WVR5O7G5stzK3wYvNDE9SP792ttVXIc6ZIVh0lFnXR5H5Vds5w-r5rp9RMrID-YG079ZqB-32qW1Pk_myB-l4bWJTAtfFqGX8204cF88gI22ceKO9Eiudv3ChpVV825yziVXdrmfHQTB42Pjui6cKDv5hvXINwgiWF5kmNkkGsXm-Iq97jO3ZLc4Xf4krBiS6OOsq-M6jC7LzSpMXec7Y-r5-oNSlivN32K_xqvA"/></a></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full px-gutter-mobile md:px-margin py-space-md gap-space-lg text-on-surface">
+<!-- TOP HERO BANNER / TERMINAL INTRO STRIP -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-sm md:p-space-md flex flex-wrap items-center justify-between gap-space-sm shadow-md">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="flex gap-1.5 px-space-xs py-1 bg-surface-container rounded-lg">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+</div>
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-on-surface-variant truncate">
+<span class="text-primary font-semibold">student@smk-rpl</span>
+<span>:~$</span>
+<span class="text-secondary font-mono truncate">cat profile.json | jq '.status'</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-high rounded-full">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-caps text-label-caps text-primary tracking-wider uppercase">Ready for PKL / Magang 2025</span>
+</div>
+</div>
+<!-- MAIN 2-COLUMN GRID (MOBILE 1-COL, DESKTOP 12-COL) -->
+<div class="w-full grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- KOLOM KIRI (md:col-span-5) -->
+<div class="flex flex-col gap-space-md md:col-span-5">
+<!-- PROFILE CARD -->
+<div class="w-full bg-surface-container rounded-xl p-space-lg flex flex-col items-center text-center relative overflow-hidden shadow-lg">
+<!-- Ambient Decorative Halo -->
+<div class="absolute -top-12 -left-12 w-40 h-40 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute -bottom-12 -right-12 w-40 h-40 bg-tertiary/10 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Avatar Wrapper -->
+<div class="relative mb-space-md">
+<div class="w-32 h-32 rounded-full p-1 bg-gradient-to-tr from-primary via-tertiary to-secondary shadow-xl shadow-primary-container/20 flex items-center justify-center">
+<img alt="Altaf Mizfalzian" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdm5Ld1cZJtVHs8-WVR5O7G5stzK3wYvNDE9SP792ttVXIc6ZIVh0lFnXR5H5Vds5w-r5rp9RMrID-YG079ZqB-32qW1Pk_myB-l4bWJTAtfFqGX8204cF88gI22ceKO9Eiudv3ChpVV825yziVXdrmfHQTB42Pjui6cKDv5hvXINwgiWF5kmNkkGsXm-Iq97jO3ZLc4Xf4krBiS6OOsq-M6jC7LzSpMXec7Y-r5-oNSlivN32K_xqvA"/>
+</div>
+<!-- Online Status Badge -->
+<div class="absolute bottom-1 right-1 bg-surface-container-lowest px-2.5 py-1 rounded-full flex items-center gap-1.5 shadow-md">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-primary uppercase">Aktif</span>
+</div>
+</div>
+<!-- Name & Badges -->
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">Altaf Mizfalzian</h2>
+<p class="font-code-sm text-code-sm text-primary font-medium mt-1">Junior Software Engineer</p>
+<div class="flex flex-wrap items-center justify-center gap-space-xs mt-space-sm">
+<span class="px-space-sm py-0.5 rounded-md bg-surface-container-high font-label-caps text-label-caps text-secondary uppercase">SMK Negeri 1 RPL</span>
+<span class="px-space-sm py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-label-caps text-label-caps uppercase">Open to Internship / PKL</span>
+</div>
+<div class="w-full mt-space-md pt-space-md flex justify-around bg-surface-container-low rounded-lg p-space-sm">
+<div class="flex flex-col items-center">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">12+</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Mini Repos</span>
+</div>
+<div class="w-px h-8 bg-surface-variant my-auto"></div>
+<div class="flex flex-col items-center">
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">3</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Main Projects</span>
+</div>
+<div class="w-px h-8 bg-surface-variant my-auto"></div>
+<div class="flex flex-col items-center">
+<span class="font-headline-sm text-headline-sm font-bold text-tertiary">3.88</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">IPK / Rata2</span>
+</div>
+</div>
+</div>
+<!-- SKILLS BAR COMPREHENSIVE -->
+<div class="w-full bg-surface-container rounded-xl p-space-md flex flex-col gap-space-md shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-title-md">bar_chart</span>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Technical Matrix</h3>
+</div>
+<span class="font-code-sm text-code-sm text-outline">Verified RPL</span>
+</div>
+<!-- Progress List -->
+<div class="flex flex-col gap-space-sm">
+<!-- Skill 1 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-code-sm text-code-sm">
+<span class="text-on-surface font-medium">HTML5 &amp; CSS3 / Tailwind</span>
+<span class="text-primary font-bold">95%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden p-0.5">
+<div class="h-full rounded-full bg-gradient-to-r from-primary to-secondary transition-all duration-1000" style="width: 95%;"></div>
+</div>
+</div>
+<!-- Skill 2 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-code-sm text-code-sm">
+<span class="text-on-surface font-medium">JavaScript / TypeScript</span>
+<span class="text-primary font-bold">88%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden p-0.5">
+<div class="h-full rounded-full bg-gradient-to-r from-primary to-secondary transition-all duration-1000" style="width: 88%;"></div>
+</div>
+</div>
+<!-- Skill 3 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-code-sm text-code-sm">
+<span class="text-on-surface font-medium">PHP &amp; Laravel Framework</span>
+<span class="text-primary font-bold">85%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden p-0.5">
+<div class="h-full rounded-full bg-gradient-to-r from-primary to-secondary transition-all duration-1000" style="width: 85%;"></div>
+</div>
+</div>
+<!-- Skill 4 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-code-sm text-code-sm">
+<span class="text-on-surface font-medium">MySQL &amp; PostgreSQL</span>
+<span class="text-primary font-bold">80%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden p-0.5">
+<div class="h-full rounded-full bg-gradient-to-r from-primary to-secondary transition-all duration-1000" style="width: 80%;"></div>
+</div>
+</div>
+<!-- Skill 5 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-code-sm text-code-sm">
+<span class="text-on-surface font-medium">Git &amp; GitHub Workflow</span>
+<span class="text-primary font-bold">90%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden p-0.5">
+<div class="h-full rounded-full bg-gradient-to-r from-primary to-secondary transition-all duration-1000" style="width: 90%;"></div>
+</div>
+</div>
+<!-- Skill 6 -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center font-code-sm text-code-sm">
+<span class="text-on-surface font-medium">RESTful API Development</span>
+<span class="text-primary font-bold">82%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden p-0.5">
+<div class="h-full rounded-full bg-gradient-to-r from-primary to-secondary transition-all duration-1000" style="width: 82%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- TOOLS & BADGES -->
+<div class="w-full bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-title-md">build_circle</span>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Dev Tools &amp; Environment</h3>
+</div>
+<div class="flex flex-wrap gap-2 pt-space-xs">
+<div class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-high rounded-lg">
+<span class="material-symbols-outlined text-primary text-body-md">code</span>
+<span class="font-code-sm text-code-sm text-on-surface">VS Code</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-high rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-body-md">send</span>
+<span class="font-code-sm text-code-sm text-on-surface">Postman</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-high rounded-lg">
+<span class="material-symbols-outlined text-secondary text-body-md">deployed_code</span>
+<span class="font-code-sm text-code-sm text-on-surface">Docker</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-high rounded-lg">
+<span class="material-symbols-outlined text-primary-container text-body-md">design_services</span>
+<span class="font-code-sm text-code-sm text-on-surface">Figma</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container-high rounded-lg">
+<span class="material-symbols-outlined text-on-surface text-body-md">terminal</span>
+<span class="font-code-sm text-code-sm text-on-surface">Linux Terminal</span>
+</div>
+</div>
+</div>
+</div>
+<!-- KOLOM KANAN (md:col-span-7) -->
+<div class="flex flex-col gap-space-md md:col-span-7">
+<!-- HEADER INFO SISWA -->
+<div class="w-full bg-surface-container rounded-xl p-space-lg flex flex-col gap-space-sm relative overflow-hidden shadow-lg">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 bg-primary/20 text-primary font-label-caps text-label-caps rounded uppercase">Curriculum Vitae</span>
+<span class="font-code-sm text-code-sm text-outline">•</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Jurusan Rekayasa Perangkat Lunak (RPL)</span>
+</div>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-on-surface tracking-tight">
+          Altaf Mizfalzian
+        </h1>
+<div class="flex flex-col gap-1">
+<div class="font-title-md text-title-md text-secondary font-medium">
+            Siswa SMK RPL | Full-Stack Web Enthusiast
+          </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-body-md text-primary">school</span>
+<span>SMK Negeri 1 Jurusan Rekayasa Perangkat Lunak (RPL)</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed mt-space-xs">
+          Berfokus pada pengembangan aplikasi web modern, performa tinggi, clean code, dan siap berkontribusi dalam program Magang/PKL Industri &amp; proyek software nyata. Terbiasa memecahkan masalah logika algoritma, arsitektur REST API, dan integrasi frontend interaktif.
+        </p>
+<!-- Micro Highlights Strip -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-space-xs mt-space-sm pt-space-sm bg-surface-container-low rounded-lg p-space-sm">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline uppercase">Minat Fokus</span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">Web Architecture</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline uppercase">Ketersediaan</span>
+<span class="font-code-sm text-code-sm text-primary font-semibold">Siap PKL / Remote</span>
+</div>
+<div class="flex flex-col col-span-2 sm:col-span-1">
+<span class="font-label-caps text-label-caps text-outline uppercase">Lokasi</span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">Indonesia</span>
+</div>
+</div>
+</div>
+<!-- FEATURED PROJECTS SECTION -->
+<div class="flex flex-col gap-space-md mt-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-title-md">folder_special</span>
+<h2 class="font-title-md text-title-md text-on-surface font-bold tracking-tight">Proyek Unggulan (Featured Projects)</h2>
+</div>
+<span class="font-label-caps text-label-caps text-primary uppercase">3 Production Ready</span>
+</div>
+<!-- Project Card 1 -->
+<div class="w-full bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-md transition-all hover:bg-surface-container-high">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-caps text-label-caps text-primary uppercase">Selesai / Production</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold mt-1">Sistem Informasi Presensi &amp; Manajemen Magang SMK</h3>
+</div>
+<a class="p-2 rounded-lg bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary transition-colors flex items-center justify-center min-w-[36px] min-h-[36px]" href="#" title="Lihat Source Code">
+<span class="material-symbols-outlined text-title-md">open_in_new</span>
+</a>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Aplikasi web end-to-end dengan fitur GPS QR scan presensi harian, jurnal kegiatan siswa PKL, dan dashboard monitoring real-time untuk guru pembimbing industri.
+          </p>
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-code-sm text-code-sm text-primary">Laravel 11</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-code-sm text-code-sm text-secondary">Tailwind CSS</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-code-sm text-code-sm text-tertiary">MySQL</span>
+</div>
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-outline">
+<span class="material-symbols-outlined text-body-md">verified_user</span>
+<span>GPS Geolocation API</span>
+</div>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="w-full bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-md transition-all hover:bg-surface-container-high">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-caps text-label-caps text-secondary uppercase">Studi Kasus / E-Commerce</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold mt-1">E-Commerce Koperasi Sekolah &amp; Payment Gateway</h3>
+</div>
+<a class="p-2 rounded-lg bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary transition-colors flex items-center justify-center min-w-[36px] min-h-[36px]" href="#" title="Lihat Source Code">
+<span class="material-symbols-outlined text-title-md">open_in_new</span>
+</a>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Platform belanja perlengkapan praktek sekolah dengan checkout otomatis terintegrasi payment gateway sandbox Midtrans, shopping cart realtime, dan manajemen inventori.
+          </p>
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-code-sm text-code-sm text-primary">React</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-code-sm text-code-sm text-secondary">Node.js</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-code-sm text-code-sm text-tertiary">Express</span>
+</div>
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-outline">
+<span class="material-symbols-outlined text-body-md">credit_card</span>
+<span>Midtrans Sandbox</span>
+</div>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="w-full bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-md transition-all hover:bg-surface-container-high">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-caps text-label-caps text-tertiary uppercase">Hardware &amp; Web Sync</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold mt-1">IoT &amp; Web Smart Laboratory Monitoring</h3>
+</div>
+<a class="p-2 rounded-lg bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary transition-colors flex items-center justify-center min-w-[36px] min-h-[36px]" href="#" title="Lihat Source Code">
+<span class="material-symbols-outlined text-title-md">open_in_new</span>
+</a>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Sistem telemetri sensor suhu, kelembapan, dan kontrol solenoid kunci pintu laboratorium komputer RPL secara real-time via broker MQTT dan dashboard interaktif.
+          </p>
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-code-sm text-code-sm text-primary">Python</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-code-sm text-code-sm text-secondary">MQTT</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-code-sm text-code-sm text-tertiary">WebSocket</span>
+</div>
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-outline">
+<span class="material-symbols-outlined text-body-md">sensors</span>
+<span>ESP32 Sensor Grid</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- FORM KONTAK (Full width / Section Bawah) -->
+<section class="w-full mt-space-md">
+<div class="w-full bg-surface-container-low rounded-xl p-space-md md:p-space-lg shadow-xl relative overflow-hidden">
+<!-- Top Decorative Accent Strip -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-tertiary to-secondary"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm mb-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-title-md">mail</span>
+<span class="font-label-caps text-label-caps text-primary uppercase">Direct Message Channel</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1">Hubungi Saya (Get in Touch)</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Punya tawaran proyek, undangan wawancara PKL / Magang industri? Kirimkan pesan instan di bawah ini.
+          </p>
+</div>
+<div class="flex items-center gap-2 px-space-sm py-1.5 bg-surface-container rounded-lg self-start md:self-auto">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Respon Rata-rata: &lt; 2 Jam</span>
+</div>
+</div>
+<!-- Form Inputs -->
+<form class="grid grid-cols-1 md:grid-cols-2 gap-space-md" id="contactForm" onsubmit="event.preventDefault(); handleSend();">
+<!-- Field Nama -->
+<div class="flex flex-col gap-1.5">
+<label class="font-code-sm text-code-sm text-on-surface font-medium flex items-center justify-between" for="name">
+<span>Nama Lengkap</span>
+<span class="text-outline text-label-caps uppercase">Identitas</span>
+</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md px-space-md py-3 rounded-xl focus:outline-none focus:bg-surface-container-high transition-all" id="name" name="name" required="" type="text" value="Altaf Mizfalzian"/>
+</div>
+</div>
+<!-- Field Email -->
+<div class="flex flex-col gap-1.5">
+<label class="font-code-sm text-code-sm text-on-surface font-medium flex items-center justify-between" for="email">
+<span>Alamat Email</span>
+<span class="text-outline text-label-caps uppercase">Kontak Balasan</span>
+</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md px-space-md py-3 rounded-xl focus:outline-none focus:bg-surface-container-high transition-all" id="email" name="email" required="" type="email" value="altaf@gmail.com"/>
+</div>
+</div>
+<!-- Field Pesan (Textarea) -->
+<div class="flex flex-col gap-1.5 md:col-span-2">
+<label class="font-code-sm text-code-sm text-on-surface font-medium flex items-center justify-between" for="message">
+<span>Isi Pesan / Keterangan</span>
+<span class="text-outline text-label-caps uppercase">Pesan Singkat</span>
+</label>
+<textarea class="w-full bg-surface-container-lowest text-on-surface font-code-md text-code-md px-space-md py-3 rounded-xl focus:outline-none focus:bg-surface-container-high transition-all resize-none" id="message" name="message" required="" rows="3">WELCOME TO MY CV</textarea>
+</div>
+<!-- Tombol CTA Neon Indigo -->
+<div class="md:col-span-2 flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-outline-variant text-center sm:text-left">
+<span class="material-symbols-outlined text-body-md">lock</span>
+<span>Terkoneksi langsung ke inbox resmi Altaf Mizfalzian.</span>
+</div>
+<button class="w-full sm:w-auto bg-primary hover:bg-primary-container text-on-primary shadow-lg shadow-primary/30 py-3.5 px-space-lg rounded-xl font-headline-sm text-title-md font-bold flex items-center justify-center gap-2 transition-all active:scale-95" id="btnSubmit" type="submit">
+<span class="material-symbols-outlined text-title-md">send</span>
+<span>Kirim Pesan</span>
+</button>
+</div>
+</form>
+<!-- Feedback Banner (Interactive Micro-UX) -->
+<div class="hidden mt-space-md p-space-sm bg-surface-container rounded-lg items-center gap-space-sm text-secondary animate-fade-in" id="successNotice">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="font-code-sm text-code-sm">Pesan berhasil terkirim! Terima kasih atas apresiasinya.</span>
+</div>
+</div>
+</section>
+<!-- FOOTER NOTATION -->
+<footer class="w-full py-space-sm flex flex-col sm:flex-row items-center justify-between gap-space-xs text-outline font-code-sm text-code-sm">
+<div class="flex items-center gap-1.5">
+<span class="text-primary">&gt;_</span>
+<span>SMK RPL Portfolio • Altaf Mizfalzian</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span>Built with Tailwind</span>
+<span>v2.4.0</span>
+</div>
+</footer>
+</div>
+<script>
+  function handleSend() {
+    const btn = document.getElementById('btnSubmit');
+    const notice = document.getElementById('successNotice');
+    if (!btn || !notice) return;
+
+    btn.disabled = true;
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-title-md">sync</span><span>Mengirim...</span>';
+
+    setTimeout(() => {
+      btn.innerHTML = '<span class="material-symbols-outlined text-title-md">done_all</span><span>Terkirim!</span>';
+      notice.classList.remove('hidden');
+      notice.classList.add('flex');
+
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.innerHTML = originalText;
+      }, 3500);
+    }, 800);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_-4px_20px_rgba(0,0,0,0.5)]" data-active-classes="text-primary font-code-md"><div class="flex justify-around items-center h-16 px-gutter-mobile"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="portfolio-projects" href="#"><span class="material-symbols-outlined text-title-md">terminal</span><span class="font-code-sm text-code-sm">Projects</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="skills-matrix" href="#"><span class="material-symbols-outlined text-title-md">data_object</span><span class="font-code-sm text-code-sm">Stack</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="experience-timeline" href="#"><span class="material-symbols-outlined text-title-md">schema</span><span class="font-code-sm text-code-sm">Journey</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] transition-colors text-primary font-code-md" data-path="profile-cv" href="#"><span class="material-symbols-outlined text-title-md">account_circle</span><span class="font-code-sm text-code-sm">Profile</span></a></div></nav></body></html>

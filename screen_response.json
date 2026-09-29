@@ -1,0 +1,28 @@
+﻿{
+    "id":  5,
+    "jsonrpc":  "2.0",
+    "result":  {
+                   "content":  [
+                                   {
+                                       "text":  "{\"name\":\"projects/12349668497166510373/screens/60f7b202a42345d19b692a182294908a\",\"title\":\"Digital CV - SMK RPL\",\"screenshot\":{\"name\":\"projects/12349668497166510373/screens/60f7b202a42345d19b692a182294908a/fileEntries/screenshot\",\"downloadUrl\":\"https://lh3.googleusercontent.com/aida/AEtjO1Vckj-JQ3fQgxKaV07H3rwu46IIe_0WorB6fOVV7ndEfSApQLQnHTd8felk0h-Vl63VvW_cgoDw_rMPqCoKO1L30He-yKSwU3ttpOUJG7HkeCB7wVjYMZT79IzRW-m_U-SsFNodBKkNBLL-2uIuOjK9xU1WUmm1_q2igYjz0x4wTjL2XjR2zaFW4ngJJhtYszNxpH6o8_c76wAXMlGd_HW3FMxeg7-l20azqOMdjmXRX2eaS0g1fFQJIt0T\"},\"htmlCode\":{\"name\":\"projects/12349668497166510373/screens/60f7b202a42345d19b692a182294908a/fileEntries/html\",\"downloadUrl\":\"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY1Yzk3MDhhM2UxMmIwNGVhYWI5ODcwMTA3NGE4EgsSBxDZ6vzq5hgYAZIBJAoKcHJvamVjdF9pZBIWQhQxMjM0OTY2ODQ5NzE2NjUxMDM3Mw\u0026filename=\u0026opi=89354086\",\"mimeType\":\"text/html\"},\"width\":\"780\",\"height\":\"7936\",\"deviceType\":\"MOBILE\"}",
+                                       "type":  "text"
+                                   }
+                               ],
+                   "structuredContent":  {
+                                             "deviceType":  "MOBILE",
+                                             "height":  "7936",
+                                             "htmlCode":  {
+                                                              "downloadUrl":  "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY1Yzk3MDhhM2UxMmIwNGVhYWI5ODcwMTA3NGE4EgsSBxDZ6vzq5hgYAZIBJAoKcHJvamVjdF9pZBIWQhQxMjM0OTY2ODQ5NzE2NjUxMDM3Mw\u0026filename=\u0026opi=89354086",
+                                                              "mimeType":  "text/html",
+                                                              "name":  "projects/12349668497166510373/screens/60f7b202a42345d19b692a182294908a/fileEntries/html"
+                                                          },
+                                             "name":  "projects/12349668497166510373/screens/60f7b202a42345d19b692a182294908a",
+                                             "screenshot":  {
+                                                                "downloadUrl":  "https://lh3.googleusercontent.com/aida/AEtjO1Vckj-JQ3fQgxKaV07H3rwu46IIe_0WorB6fOVV7ndEfSApQLQnHTd8felk0h-Vl63VvW_cgoDw_rMPqCoKO1L30He-yKSwU3ttpOUJG7HkeCB7wVjYMZT79IzRW-m_U-SsFNodBKkNBLL-2uIuOjK9xU1WUmm1_q2igYjz0x4wTjL2XjR2zaFW4ngJJhtYszNxpH6o8_c76wAXMlGd_HW3FMxeg7-l20azqOMdjmXRX2eaS0g1fFQJIt0T",
+                                                                "name":  "projects/12349668497166510373/screens/60f7b202a42345d19b692a182294908a/fileEntries/screenshot"
+                                                            },
+                                             "title":  "Digital CV - SMK RPL",
+                                             "width":  "780"
+                                         }
+               }
+}
